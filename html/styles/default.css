@@ -1,0 +1,52 @@
+h1 {
+  font-size: 4em;
+}
+
+#mioDiv {
+  font-size: 40px;
+  color: blue;
+}
+
+.class1 {
+  color: red;
+}
+
+body ul {
+  list-style-type: circle;
+}
+
+ul ul {
+  list-style-type: disc;
+}
+
+.menu {
+  background-color: bisque;
+}
+
+ul.menu {
+  list-style-type: none;
+  margin-block-start: 0px;
+  padding-inline-start: len;
+}
+
+ul.menu li {
+  display: inline;
+}
+
+#timImg {
+  width: 10%;
+}
+
+table {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}

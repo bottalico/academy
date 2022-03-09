@@ -1,0 +1,11 @@
+ol#messages li.won {
+  background-color: green;
+}
+
+ol#messages li.toolow {
+  background-color: yellow;
+}
+
+ol#messages li.toohigh {
+  background-color: red;
+}

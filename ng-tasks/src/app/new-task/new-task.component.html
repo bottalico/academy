@@ -1,0 +1,15 @@
+<div class="row row-cols-lg-auto g-3 align-items-center">
+  <div class="col-12 mb-3 form-floating">
+    <input
+      id="newTaskInput"
+      class="form-control"
+      placeholder="New task"
+      [(ngModel)]="text"
+      (keyup)="$event.key === 'Enter' ? btn.click() : null"
+    />
+    <label for="newTaskInput">New task</label>
+  </div>
+  <div class="col-12 mb-3">
+    <button #btn class="btn btn-primary" (click)="add()">Add</button>
+  </div>
+</div>

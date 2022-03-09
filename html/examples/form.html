@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempi Form</title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <a href="../index.html">Home</a>
+    </div>
+    <h1>Esempi form</h1>
+    <h2>Una form in get</h2>
+    <div>
+      <form action="search" method="get">
+        <label for="queryInput">Valore da cercare: </label>
+        <input
+          id="queryInput"
+          type="text"
+          name="query"
+          placeholder="Scrivi il valore da cercare"
+        />
+        <input type="submit" value="invia" />
+      </form>
+    </div>
+    <h2>Una form in post</h2>
+    <div>
+      <form action="update" method="post">
+        <div>
+          <label for="name">Nome: </label>
+          <input id="name" type="text" name="nome" />
+        </div>
+        <div>
+          <label for="dataNascita">Data di nascita: </label>
+          <input id="dataNascita" type="date" name="dataNascita" />
+        </div>
+        <div>
+          <label for="altro">Altro: </label>
+          <input id="altro" type="number" min="5" name="altro" />
+        </div>
+        <div>
+          <label>Radio: </label>
+          <input id="radio1" type="radio" name="radio" value="r1" /><label
+            for="radio1"
+            >Radio 1</label
+          >
+          <input
+            id="radio2"
+            type="radio"
+            name="radio"
+            value="r2"
+            checked
+          /><label for="radio2">Radio 2</label>
+          <input id="radio3" type="radio" name="radio" value="r3" /><label
+            for="radio3"
+            >Radio 3</label
+          >
+        </div>
+        <div>
+          <label>Checkbox: </label>
+          <input id="checkbox1" type="checkbox" name="check" value="c1" /><label
+            for="checkbox1"
+            >Radio 1</label
+          >
+          <input
+            id="checkbox2"
+            type="checkbox"
+            name="check"
+            value="c2"
+            checked
+          /><label for="checkbox2">Radio 2</label>
+          <input id="checkbox3" type="checkbox" name="check" value="c3" /><label
+            for="checkbox3"
+            >Radio 3</label
+          >
+        </div>
+        <div>
+          <label for="citta">Città: </label>
+          <select name="citta">
+            <option value=""></option>
+            <option value="VR">Verona</option>
+            <option value="BA" selected>Bari</option>
+            <option value="RM">Roma</option>
+          </select>
+        </div>
+        <div>
+          <label for="citta2">Città: </label>
+          <select name="citta2" multiple>
+            <option value=""></option>
+            <option value="VR">Verona</option>
+            <option value="BA" selected>Bari</option>
+            <option value="RM">Roma</option>
+          </select>
+        </div>
+        <input type="submit" value="invia" />
+      </form>
+    </div>
+    <script src="../js/forms.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <form autocomplete="off" (submit)="tryNumber($event)">
+      <h1>Indovina il numero</h1>
+      <p>Indovina un numero fra {{ min }} e {{ max }}</p>
+      <input
+        #inv
+        type="number"
+        class="form-control"
+        placeholder="Indovina..."
+        [disabled]="game!.won"
+        [min]="min"
+        [max]="max"
+      />
+      <button type="submit" class="btn btn-primary" [disabled]="game!.won">
+        Prova!
+      </button>
+      <button *ngIf="game!.won" class="btn btn-success" (click)="resetGame()">
+        Nuova partita
+      </button>
+    </form>
+    <div class="mt-2 mb-2">
+      <ul class="list-group">
+        <li
+          *ngFor="let result of game!.results; index as i"
+          [class]="resultClasses(result)"
+        >
+          Tentativo {{ i + 1 }}: {{ result.number }} {{ messageFor(result) }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>

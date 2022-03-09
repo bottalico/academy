@@ -1,0 +1,13 @@
+<form #f="ngForm" class="d-flex" (ngSubmit)="searchSubmitted(f)">
+  <input
+    #searchinput
+    name="currentSearchValue"
+    [class.form-control]="formclass"
+    [class.me-2]="true"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    ngModel
+  />
+  <button [class]="buttonClasses">Search</button>
+</form>

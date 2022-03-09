@@ -1,0 +1,15 @@
+<h2>Elenco dei tasks di oggi</h2>
+<ul *ngIf="canShowTasks()">
+  <li
+    *ngFor="let task of filteredTasks()"
+    [class.completed]="task.completed"
+    [style.display]="task.hidden ? 'none' : null"
+  >
+    <span (click)="toggleTask(task)">{{ task.text }}</span>
+    <a class="btn btn-danger btn-sm" (click)="hideTask(task)">Hide</a>
+  </li>
+</ul>
+<div *ngIf="!canShowTasks()">
+  Bravo, hai completato tutto quello che dovevi fare!!!
+</div>
+<app-new-task (newTask)="addTask($event)"></app-new-task>
